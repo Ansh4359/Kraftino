@@ -103,7 +103,7 @@ const Header = () => {
     }
   ];
 
-  const handleDropdownToggle = (index: any) => {
+  const handleDropdownToggle = (index: number) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
   
@@ -232,7 +232,7 @@ const Header = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <div className="py-1">
-                        {item.dropdownItems?.map((dropdownItem, itemIndex) => (
+                        {item.dropdownItems?.map((dropdownItem) => (
                           <a
                             key={dropdownItem.name}
                             href={dropdownItem.href}

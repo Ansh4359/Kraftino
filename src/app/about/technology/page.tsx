@@ -93,7 +93,7 @@ const TechnologyFocus = () => {
                 <h3 className="text-2xl font-semibold text-white">Cyber Security</h3>
               </div>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                With each passing day, digital attacks inside and outside your company's network become more sophisticated. KNAV collaborates with partners to ensure 
+                With each passing day, digital attacks inside and outside your company&apos;s network become more sophisticated. KNAV collaborates with partners to ensure 
                 your company knows network security risks, prevents data breaches, and stops information theft.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -133,7 +133,7 @@ const TechnologyFocus = () => {
                 <h3 className="text-2xl font-semibold text-white">Client Data Security</h3>
               </div>
               <p className="text-gray-300 leading-relaxed text-lg">
-                At KNAV, we emphasize maintaining the security and accessibility of our client's data. While working with sensitive client data, we must take precautions 
+                At KNAV, we emphasize maintaining the security and accessibility of our client&apos;s data. While working with sensitive client data, we must take precautions 
                 to prevent the breach of private data. We use a renowned cloud-based file-sharing platform with excellent data encryption, making sharing massive files 
                 very simple. In addition, information sharing is made simple and secure through our client data gateway.
               </p>

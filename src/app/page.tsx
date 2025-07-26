@@ -1,4 +1,3 @@
-import About from "./Components/about";
 import About2 from "./Components/about2";
 import QuestionsSection from "./Components/haveQuestions";
 import Insights from "./Components/insightsCorousel";

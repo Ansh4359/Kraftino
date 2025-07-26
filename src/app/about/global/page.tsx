@@ -45,7 +45,7 @@ export default function KraftinoHero() {
 
             <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105">
               <p className="text-lg leading-relaxed">
-                Most of Kraftino's clients have international ambitions or presence, and we have the expertise they require to successfully 
+                Most of Kraftino&apos;s clients have international ambitions or presence, and we have the expertise they require to successfully 
                 navigate challenging, time-sensitive projects in a dynamic global environment.
               </p>
             </div>

@@ -152,7 +152,7 @@ const ContactUs = () => {
           console.error('Frontend - Error response:', responseData);
           setSubmitStatus('error');
         }
-      } catch (parseError) {
+      } catch {
         console.error('Frontend - Could not parse response as JSON:', responseText);
         if (response.ok) {
           setSubmitStatus('success');
@@ -173,91 +173,6 @@ const ContactUs = () => {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-    }
-  };
-
-  // Debug function to test direct Hono worker call
-  const testDirectHonoCall = async () => {
-    console.log('=== TESTING DIRECT HONO WORKER CALL ===');
-    try {
-      const testData = {
-        fullName: 'Test User',
-        emailAddress: 'test@example.com',
-        company: 'Test Company',
-        phoneNumber: '+1234567890',
-        subject: 'Test Subject',
-        message: 'This is a test message from the website'
-      };
-      
-      console.log('Direct test - Sending data:', testData);
-      console.log('Direct test - JSON payload:', JSON.stringify(testData, null, 2));
-      
-      const response = await fetch('http://localhost:8787/api/email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(testData),
-      });
-      
-      console.log('Direct test - Response status:', response.status);
-      console.log('Direct test - Response headers:', Object.fromEntries(response.headers.entries()));
-      const responseText = await response.text();
-      console.log('Direct test - Response body:', responseText);
-      
-      if (response.ok) {
-        console.log('✅ DIRECT TEST SUCCESSFUL - Email should have been sent!');
-      } else {
-        console.log('❌ DIRECT TEST FAILED');
-      }
-    } catch (error) {
-      console.error('Direct test - Error:', error);
-    }
-  };
-
-  // New debug function to test the Next.js API route
-  const testNextApiRoute = async () => {
-    console.log('=== TESTING NEXT.JS API ROUTE ===');
-    try {
-      const testData = {
-        fullName: 'API Test User',
-        emailAddress: 'apitest@example.com',
-        company: 'API Test Company',
-        phoneNumber: '+1987654321',
-        subject: 'API Test Subject',
-        message: 'This is a test message through the Next.js API route'
-      };
-      
-      console.log('API test - Sending data:', testData);
-      console.log('API test - JSON payload:', JSON.stringify(testData, null, 2));
-      
-      const response = await fetch('/api/email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(testData),
-      });
-      
-      console.log('API test - Response status:', response.status);
-      console.log('API test - Response headers:', Object.fromEntries(response.headers.entries()));
-      const responseText = await response.text();
-      console.log('API test - Raw response body:', responseText);
-      
-      try {
-        const responseData = JSON.parse(responseText);
-        console.log('API test - Parsed response data:', responseData);
-      } catch (parseError) {
-        console.log('API test - Could not parse as JSON, raw text:', responseText);
-      }
-      
-      if (response.ok) {
-        console.log('✅ API ROUTE TEST SUCCESSFUL - Email should have been sent!');
-      } else {
-        console.log('❌ API ROUTE TEST FAILED');
-      }
-    } catch (error) {
-      console.error('API test - Error:', error);
     }
   };
 
@@ -455,7 +370,7 @@ const ContactUs = () => {
                   {/* Submit Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                      <p className="text-green-300 text-sm">Message sent successfully! We'll get back to you soon.</p>
+                      <p className="text-green-300 text-sm">Message sent successfully! We&apos;ll get back to you soon.</p>
                     </div>
                   )}
                   

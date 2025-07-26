@@ -1,6 +1,6 @@
-'use client'
+"use client"
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Clock, User } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock } from 'lucide-react';
 
 const InsightsCarousel = () => {
   // Sample data based on the HTML structure

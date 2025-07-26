@@ -54,7 +54,7 @@ const TestimonialCarousel = () => {
     );
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
@@ -94,7 +94,7 @@ const TestimonialCarousel = () => {
           <div className="text-center min-h-32 flex flex-col justify-center">
             <div className="transition-opacity duration-700 ease-in-out">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
-                "{testimonials[currentIndex].text}"
+                &ldquo;{testimonials[currentIndex].text}&rdquo;
               </p>
               <div className="flex justify-center items-center">
                 <div className="text-sm text-gray-500 font-medium">

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Search, ArrowRight, FileText, Users, Award, Building } from 'lucide-react';
 import Header from '../Components/header';
 
@@ -17,7 +17,7 @@ const SearchPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Comprehensive search data
-  const searchData: SearchResult[] = [
+  const searchData: SearchResult[] = useMemo(() => [
     {
       title: 'Contact Us',
       href: '/contact',
@@ -151,20 +151,9 @@ const SearchPage = () => {
       description: 'Apply for internship opportunities and gain valuable experience.',
       keywords: ['internships', 'intern', 'student', 'experience', 'program']
     }
-  ];
+  ], []);
 
-  useEffect(() => {
-    // Get search query from URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q') || '';
-    setSearchQuery(query);
-    
-    if (query) {
-      performSearch(query);
-    }
-  }, []);
-
-  const performSearch = (query: string) => {
+  const performSearch = useCallback((query: string) => {
     setIsLoading(true);
     
     // Simulate search delay
@@ -178,7 +167,18 @@ const SearchPage = () => {
       setSearchResults(results);
       setIsLoading(false);
     }, 300);
-  };
+  }, [searchData]);
+
+  useEffect(() => {
+    // Get search query from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q') || '';
+    setSearchQuery(query);
+    
+    if (query) {
+      performSearch(query);
+    }
+  }, [performSearch]);
 
   const handleNewSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -269,7 +269,7 @@ const SearchPage = () => {
             ) : searchResults.length > 0 ? (
               <>
                 <div className="text-gray-300 mb-6">
-                  Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for "{searchQuery}"
+                  Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &ldquo;{searchQuery}&rdquo;
                 </div>
                 {searchResults.map((result, index) => (
                   <div
@@ -312,7 +312,7 @@ const SearchPage = () => {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
                 <p className="text-gray-400 mb-6">
-                  We couldn't find anything matching "{searchQuery}". Try different keywords or browse our sections.
+                  We couldn&apos;t find anything matching &ldquo;{searchQuery}&rdquo;. Try different keywords or browse our sections.
                 </p>
                 
                 {/* Suggested sections */}
@@ -341,7 +341,7 @@ const SearchPage = () => {
                 <div className="text-6xl mb-4">👋</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Welcome to Search</h3>
                 <p className="text-gray-400">
-                  Enter a search term above to find what you're looking for.
+                  Enter a search term above to find what you&apos;re looking for.
                 </p>
               </div>
             )}

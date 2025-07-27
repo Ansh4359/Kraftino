@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Linkedin, Facebook, Twitter, Youtube } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -47,11 +48,13 @@ export default function Footer() {
           </div>
 
           {/* Get In Touch */}
+          <Link href="/contact">
           <div>
             <h3 className="text-sm font-medium mb-4 text-orange-400 border-b-2 border-orange-400 pb-1 inline-block">
               Get In Touch
             </h3>
           </div>
+          </Link>
 
           {/* Careers */}
           <div>

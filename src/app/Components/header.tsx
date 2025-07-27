@@ -9,6 +9,7 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchSuggestions, setSearchSuggestions] = useState<Array<{title: string, href: string, type: string}>>([]);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   // Search data for suggestions
   const searchData = [
@@ -43,6 +44,15 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeout) {
+        clearTimeout(dropdownTimeout);
+      }
+    };
+  }, [dropdownTimeout]);
 
   const navigationItems = [
     {
@@ -105,6 +115,29 @@ const Header = () => {
 
   const handleDropdownToggle = (index: number) => {
     setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const handleDropdownEnter = (index: number) => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setActiveDropdown(index);
+  };
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150); // 150ms delay before hiding
+    setDropdownTimeout(timeout);
+  };
+
+  const handleDropdownItemClick = () => {
+    setActiveDropdown(null);
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
   };
   
   const getBacktoHome = () => {
@@ -205,8 +238,8 @@ const Header = () => {
                           ? 'text-yellow-400 bg-yellow-400/10' 
                           : 'text-gray-200 hover:text-white hover:bg-gray-800/50'
                       }`}
-                      onMouseEnter={() => setActiveDropdown(index)}
-                      onMouseLeave={() => setActiveDropdown(null)}
+                      onMouseEnter={() => handleDropdownEnter(index)}
+                      onMouseLeave={handleDropdownLeave}
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
@@ -228,14 +261,15 @@ const Header = () => {
                   {item.hasDropdown && activeDropdown === index && (
                     <div
                       className="absolute top-full left-0 mt-1 w-56 bg-gray-800/95 backdrop-blur-md rounded-lg shadow-2xl z-[10000] border border-gray-700/50 overflow-hidden"
-                      onMouseEnter={() => setActiveDropdown(index)}
-                      onMouseLeave={() => setActiveDropdown(null)}
+                      onMouseEnter={() => handleDropdownEnter(index)}
+                      onMouseLeave={handleDropdownLeave}
                     >
                       <div className="py-1">
                         {item.dropdownItems?.map((dropdownItem) => (
                           <a
                             key={dropdownItem.name}
                             href={dropdownItem.href}
+                            onClick={handleDropdownItemClick}
                             className="flex items-center px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-700/50 hover:text-white transition-colors duration-150 border-b border-gray-700/30 last:border-b-0"
                           >
                             <span>{dropdownItem.name}</span>

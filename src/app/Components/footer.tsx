@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="space-y-6">
             
             <div className="text-2xl font-bold tracking-wider">
-              TaxaGO
+              TaxaGO™
               <div className="text-xs text-gray-400 mt-1">
                 Consultancy Services
               </div>

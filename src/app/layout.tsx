@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KRAFTINO",
-  description: "Kraftino Official",
+  title: "TAXAGO",
+  description: "TaxaGo Official",
 };
 
 export default function RootLayout({

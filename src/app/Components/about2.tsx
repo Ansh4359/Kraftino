@@ -11,14 +11,14 @@ function About2() {
           <div className="space-y-6">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-sans leading-tight">
-                <span className="text-black-600">KRAFTINO</span>
+                <span className="text-black-600">TAXAGO</span>
               </h1>
               {/* <div className='w-41 h-1 bg-blue-600 mt-3'></div> */}
             </div>
 
             <div className="space-y-4 text-gray-700 font-sans leading-relaxed">
               <p className="text-base">
-                Kraftino Consultancy Services is a top rated accounting, taxation, Financial and Investment advisory firm entrusted by individuals and leading organizations to deliver effective accounting, advisory, and financial solutions with diligence, vision, and responsive client service.
+                TaxaGo Consultancy Services is a top rated accounting, taxation, Financial and Investment advisory firm entrusted by individuals and leading organizations to deliver effective accounting, advisory, and financial solutions with diligence, vision, and responsive client service.
               </p>
 
               <p className="text-base">
@@ -32,7 +32,7 @@ function About2() {
                 <div className="text-2xl font-bold text-black-600 font-sans">
                   <CountUp
                     from={0}
-                    to={100}
+                    to={500}
                     separator=","
                     direction="up"
                     duration={0.1}
@@ -47,7 +47,7 @@ function About2() {
                 <div className="text-2xl font-bold text-black-600 font-sans">
                   <CountUp
                     from={0}
-                    to={10}
+                    to={4}
                     separator=","
                     direction="up"
                     duration={0.1}

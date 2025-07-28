@@ -57,14 +57,14 @@ const TechnologyFocus = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed text-lg">
                     The workplace is rapidly evolving in the age of Industry 4.0. The emergence 
                     of new technologies like Robotics Process Automation and Artificial 
-                    Intelligence has a consequential impact on the services that KNAV gives its 
+                    Intelligence has a consequential impact on the services that TaxaGo gives its 
                     end clients and how we choose to harness new technologies in our quest to 
                     boost the quality and cost of our services.
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed text-lg">
                     To help you improve your performance and add more value to your 
-                    business without having to learn all the newest technology, KNAV uses the 
+                    business without having to learn all the newest technology, TaxaGo uses the 
                     most advanced AI, machine learning, and analytics technologies.
                   </p>
                 </div>
@@ -93,7 +93,7 @@ const TechnologyFocus = () => {
                 <h3 className="text-2xl font-semibold text-white">Cyber Security</h3>
               </div>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                With each passing day, digital attacks inside and outside your company&apos;s network become more sophisticated. KNAV collaborates with partners to ensure 
+                With each passing day, digital attacks inside and outside your company&apos;s network become more sophisticated. TaxaGo collaborates with partners to ensure 
                 your company knows network security risks, prevents data breaches, and stops information theft.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -133,7 +133,7 @@ const TechnologyFocus = () => {
                 <h3 className="text-2xl font-semibold text-white">Client Data Security</h3>
               </div>
               <p className="text-gray-300 leading-relaxed text-lg">
-                At KNAV, we emphasize maintaining the security and accessibility of our client&apos;s data. While working with sensitive client data, we must take precautions 
+                At TaxaGo, we emphasize maintaining the security and accessibility of our client&apos;s data. While working with sensitive client data, we must take precautions 
                 to prevent the breach of private data. We use a renowned cloud-based file-sharing platform with excellent data encryption, making sharing massive files 
                 very simple. In addition, information sharing is made simple and secure through our client data gateway.
               </p>

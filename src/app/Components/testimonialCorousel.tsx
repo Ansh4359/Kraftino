@@ -8,7 +8,7 @@ const TestimonialCarousel = () => {
 
   const testimonials = [
     {
-      text: "KNAV team is a highly professional, experienced, and knowledgeable. It is always satisfying to work with them.",
+      text: "TaxaGo team is a highly professional, experienced, and knowledgeable. It is always satisfying to work with them.",
       company: "Leading Financial Institution"
     },
     {
@@ -16,11 +16,11 @@ const TestimonialCarousel = () => {
       company: "Tech Startup Unicorn"
     },
     {
-      text: "KNAV's commitment to excellence and attention to detail sets them apart from other consulting firms in the industry.",
+      text: "TaxaGo's commitment to excellence and attention to detail sets them apart from other consulting firms in the industry.",
       company: "Fortune 500 Corporation"
     },
     {
-      text: "Working with KNAV has transformed our approach to business strategy. Their insights are invaluable.",
+      text: "Working with TaxaGo has transformed our approach to business strategy. Their insights are invaluable.",
       company: "Global Manufacturing Leader"
     },
     {

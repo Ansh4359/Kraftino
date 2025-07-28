@@ -219,10 +219,10 @@ const Header = () => {
             <div className="flex-shrink-0 flex items-center">
               <div className="cursor-pointer transition-opacity duration-200 hover:opacity-80" onClick={getBacktoHome}>
                 <div className="text-xl font-bold tracking-wide text-white">
-                  KRAFTINO
+                  TAXAGO
                 </div>
                 <div className="text-xs text-gray-400 tracking-wide uppercase font-medium -mt-1">
-                  Partners Beyond Boundaries
+                  Consultancy Services
                 </div>
               </div>
             </div>

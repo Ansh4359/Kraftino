@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Logo and Social Media */}
           <div className="space-y-6">
             <div className="text-2xl font-bold tracking-wider">
-              TAXAGO
+              TaxaGO
               <div className="text-xs text-gray-400 mt-1">
                 CHARTERED ACCOUNTANTS
               </div>
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center text-sm text-gray-500">
-            © 2025 Copyright By TaxaGo. All Rights Reserved.
+            © 2025 Copyright By TaxaGO. All Rights Reserved.
           </div>
         </div>
       </div>

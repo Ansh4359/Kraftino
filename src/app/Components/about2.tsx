@@ -11,7 +11,7 @@ function About2() {
           <div className="space-y-6">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-sans leading-tight">
-                <span className="text-black-600">TAXAGO</span>
+                <span className="text-black-600">TaxaGO</span>
               </h1>
               {/* <div className='w-41 h-1 bg-blue-600 mt-3'></div> */}
             </div>

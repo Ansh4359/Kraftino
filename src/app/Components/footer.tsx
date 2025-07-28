@@ -23,9 +23,9 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="text-2xl font-bold tracking-wider">
               TaxaGO
-              <div className="text-xs text-gray-400 mt-1">
+              {/* <div className="text-xs text-gray-400 mt-1">
                 CHARTERED ACCOUNTANTS
-              </div>
+              </div> */}
             </div>
             
             <div>

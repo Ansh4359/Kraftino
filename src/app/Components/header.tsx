@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Search, Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -216,16 +217,17 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              <div className="cursor-pointer transition-opacity duration-200 hover:opacity-80" onClick={getBacktoHome}>
+            <div className="flex-shrink-0 flex items-center" onClick={getBacktoHome}>
+             
+           <div className="cursor-pointer transition-opacity duration-200 hover:opacity-80" onClick={getBacktoHome}>
                 <div className="text-xl font-bold tracking-wide text-white">
                   TaxaGO
                 </div>
                 <div className="text-xs text-gray-400 tracking-wide uppercase font-medium -mt-1">
-                  Consultancy Services
+                  Consultancy Services™
                 </div>
-              </div>
-            </div>
+              </div> 
+            </div> 
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">

@@ -21,6 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Social Media */}
           <div className="space-y-6">
+            
             <div className="text-2xl font-bold tracking-wider">
               TaxaGO
               <div className="text-xs text-gray-400 mt-1">

@@ -67,7 +67,7 @@ function About2() {
               <div className="space-y-4 text-white">
                 <h2 className="text-xl font-bold font-sans">Our Mission</h2>
                 <p className="text-blue-100 font-sans leading-relaxed text-sm">
-                TaxaGo Consultancy Services  was established on 1st March 2022 By Mr.Sanjeev Kumar Singh and his Associates.Since then, the firm has grown in strength over the years with plethora of knowledge and experience of it's professionals.
+                TaxaGo Consultancy Services  was established on 1st March 2022 By Mr.Sanjeev Kumar Singh and his Associates.Since then, the firm has grown in strength over the years with plethora of knowledge and experience of it&apos;s professionals.
                 </p>
 
                 <div className="space-y-3 pt-3">

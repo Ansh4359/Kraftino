@@ -227,8 +227,7 @@ const ContactUs = () => {
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Ready to transform your business with cutting-edge technology
                   solutions? Get in touch with our expert team to discuss how
-                  KNAV can help you leverage AI, machine learning, and advanced
-                  analytics to drive your success.
+                  TaxaGO can help you with consultancy services to drive your success.
                 </p>
               </div>
             </div>
@@ -354,7 +353,7 @@ const ContactUs = () => {
                             ? "border-red-500 focus:ring-red-500"
                             : "border-white/20 focus:ring-blue-500"
                         }`}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 XXXXXXXXXX"
                       />
                       {errors.phoneNumber && (
                         <p className="mt-1 text-sm text-red-400">
@@ -557,9 +556,8 @@ const ContactUs = () => {
                   <h3 className="text-lg font-semibold text-white">Email</h3>
                 </div>
                 <p className="text-gray-300 text-sm">
-                  contact@knav.com
-                  <br />
-                  support@knav.com
+                  taxagocs@gmail.com
+                  
                 </p>
               </div>
 
@@ -584,9 +582,9 @@ const ContactUs = () => {
                   <h3 className="text-lg font-semibold text-white">Phone</h3>
                 </div>
                 <p className="text-gray-300 text-sm">
-                  +1 (555) 123-4567
+                  +91 9999473062
                   <br />
-                  +1 (555) 987-6543
+                  +91 8475956557
                 </p>
               </div>
 

@@ -7,7 +7,7 @@ export default function TaxaTeam() {
       id: 1,
       name: "Sanjeev Kumar Singh",
       role: "Founder & Investment Consultant",
-      bio: "10 Years of Experience in Field of Account Finance Taxation and Business Manager in India and Overseas",
+      bio: "Over 10 years of extensive experience in Accounting, Finance, Taxation, and Business Management, both in India and internationally",
       image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941990/IMG-20250730-WA0059_vsv4xq.jpg",
       skills: ["BCom", "MCom", "MBA","CISA"]
     },
@@ -15,42 +15,43 @@ export default function TaxaTeam() {
       id: 2,
       name: "Sampa Singh",
       role: "Business Consultant",
-      bio: "2 Years of Work Experience In the Field of Business Admistration and Operations",
+      bio: "2 years of hands-on experience in Business Administration and Operations, driving efficiency and supporting organizational growth",
       image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753944750/IMG_20250731_122142_brpkvy.jpg",
       skills: ["BA", "MA", "MBA"]
     },
     {
       id: 3,
-      name: "Kundan Kumar",
-      role: "Tax & Compliance Consultant",
+      name: "Mohammad Faraz",
+      role: "Co-Founder and Tax Consultant",
       bio: "3 Years of Work Experience in Field of Account Taxation and Financing and other Corporate Laws",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      skills: ["BCom", "LLB"]
+      image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941989/IMG-20250730-WA0060_kdqtmx.jpg",
+      skills: ["BCom"]
     },
     {
       id: 4,
       name: "Gauri Singh",
       role: "Tax Consultant",
-      bio: "Bridging technology and business strategy across diverse global markets and cultural landscapes.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      bio: "3 years of experience in Taxation Litigation and Business Administration, with a focus on compliance, dispute resolution, and operational management",
+      image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941989/IMG-20250730-WA0058_yej2ka.jpg",
       skills: ["Business Strategy", "Market Analysis", "Client Relations"]
     },
     {
       id: 5,
-      name: "David Park",
-      role: "Head of Innovation",
-      bio: "Pioneering cutting-edge solutions and emerging technologies for next-generation digital experiences.",
-      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
-      skills: ["Innovation Strategy", "Emerging Tech", "R&D"]
+      name: "Kundan Kumar",
+      role: "Tax & Compliance Consultant",
+      bio: "3 Years of Work Experience in Field of Account Taxation and Financing and other Corporate Laws",
+      image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941989/IMG-20250730-WA0076_wjfgct.jpg",
+      skills: ["BCom", "LLB"]
     },
     {
       id: 6,
-      name: "Priya Sharma",
-      role: "Global Security Director",
-      bio: "Ensuring robust security frameworks for international operations and cross-border data protection.",
-      image: "https://images.unsplash.com/photo-1554727242-741c14fa561c?w=400&h=400&fit=crop&crop=face",
-      skills: ["Cybersecurity", "Compliance", "Risk Management"]
+      name: "Deepak Jain",
+      role: "Chartered Accountant",
+      bio: "15 years of comprehensive experience in Accounting, Taxation, and Finance, with a strong track record in financial planning, compliance, and strategic management",
+      image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941989/IMG-20250730-WA0079_a6bzdf.jpg",
+      skills: ["BCom", "CA"]
     }
+    
   ];
 
   return (
@@ -90,8 +91,7 @@ export default function TaxaTeam() {
             <div className="max-w-3xl mx-auto">
               <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl">
                 <p className="text-lg leading-relaxed text-gray-300">
-                  Meet the visionary minds behind our global innovation initiatives. Our diverse team of experts brings together 
-                  decades of experience in international technology, digital transformation, and cross-border solutions.
+                  Meet the visionary minds driving our global tax advisory initiatives. Our diverse team of experts brings together decades of experience in international taxation, financial compliance, and cross-border business solutions.
                 </p>
               </div>
             </div>
@@ -156,20 +156,20 @@ export default function TaxaTeam() {
                 Ready to Work with TaxaGO Experts?
               </h2>
               <p className="text-gray-300 mb-8 text-lg">
-                Our team is ready to tackle your most challenging international technology projects and drive your global digital transformation.
+                Our team is equipped to handle your most complex international tax matters and guide your global financial and compliance transformation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                 <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-110 hover:from-blue-500 hover:to-cyan-500 cursor-pointer">
-                  <span className="relative z-10">Get in Touch</span>
+                  <span className="relative z-10">Send Your Resume</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
                 </button>
                 </Link>
                 
-                <button className="group relative px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
+                {/* <button className="group relative px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
                   <span className="relative z-10">View Our Work</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

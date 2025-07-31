@@ -21,10 +21,11 @@ const Header = () => {
     { title: 'Awards', href: '/about/awards', type: 'About', keywords: ['awards', 'recognition', 'achievements'] },
     { title: 'Technology Focus', href: '/about/technology', type: 'About', keywords: ['technology', 'tech', 'innovation', 'digital'] },
     { title: 'Our Offices', href: '/about/location', type: 'About', keywords: ['offices', 'location', 'address', 'where'] },
-    { title: 'Assurance Services', href: '/practices/assurance', type: 'Service', keywords: ['assurance', 'audit', 'compliance'] },
-    { title: 'Tax Services', href: '/practices/tax', type: 'Service', keywords: ['tax', 'taxation', 'filing', 'returns'] },
-    { title: 'Advisory Services', href: '/practices/advisory', type: 'Service', keywords: ['advisory', 'consulting', 'advice'] },
-    { title: 'Risk Management', href: '/practices/risk', type: 'Service', keywords: ['risk', 'management', 'assessment'] },
+    { title: 'Our Team', href: '/about/team', type: 'About', keywords: ['team', 'people', 'staff', 'professionals'] },
+    { title: 'Assurance Services', href: '/services/assurance', type: 'Service', keywords: ['assurance', 'audit', 'compliance'] },
+    { title: 'Tax Services', href: '/services/tax', type: 'Service', keywords: ['tax', 'taxation', 'filing', 'returns'] },
+    { title: 'Advisory Services', href: '/services/advisory', type: 'Service', keywords: ['advisory', 'consulting', 'advice'] },
+    { title: 'Risk Management', href: '/services/risk', type: 'Service', keywords: ['risk', 'management', 'assessment'] },
     { title: 'Insights & Publications', href: '/resources/insights', type: 'Resource', keywords: ['insights', 'publications', 'articles', 'research'] },
     { title: 'Whitepapers', href: '/resources/whitepapers', type: 'Resource', keywords: ['whitepapers', 'papers', 'documents'] },
     { title: 'Case Studies', href: '/resources/case-studies', type: 'Resource', keywords: ['case', 'studies', 'examples', 'success'] },
@@ -130,7 +131,7 @@ const Header = () => {
   const handleDropdownLeave = () => {
     const timeout = setTimeout(() => {
       setActiveDropdown(null);
-    }, 150); // 150ms delay before hiding
+    }, 150); // Reduced to 150ms delay before hiding
     setDropdownTimeout(timeout);
   };
 
@@ -218,9 +219,8 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center" onClick={getBacktoHome}>
-             
-           <div className="cursor-pointer transition-opacity duration-200 hover:opacity-80" onClick={getBacktoHome}>
+            <div className="flex-shrink-0 flex items-center">
+              <div className="cursor-pointer transition-opacity duration-200 hover:opacity-80" onClick={getBacktoHome}>
                 <div className="text-xl font-bold tracking-wide text-white">
                   TaxaGO™
                 </div>
@@ -233,7 +233,12 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
               {navigationItems.map((item, index) => (
-                <div key={item.name} className="relative group">
+                <div 
+                  key={item.name} 
+                  className="relative group"
+                  onMouseEnter={() => handleDropdownEnter(index)}
+                  onMouseLeave={handleDropdownLeave}
+                >
                   {item.hasDropdown ? (
                     <button
                       className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${
@@ -241,8 +246,6 @@ const Header = () => {
                           ? 'text-yellow-400 bg-yellow-400/10' 
                           : 'text-gray-200 hover:text-white hover:bg-gray-800/50'
                       }`}
-                      onMouseEnter={() => handleDropdownEnter(index)}
-                      onMouseLeave={handleDropdownLeave}
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
@@ -262,22 +265,20 @@ const Header = () => {
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && activeDropdown === index && (
-                    <div
-                      className="absolute top-full left-0 mt-1 w-56 bg-gray-800/95 backdrop-blur-md rounded-lg shadow-2xl z-[10000] border border-gray-700/50 overflow-hidden"
-                      onMouseEnter={() => handleDropdownEnter(index)}
-                      onMouseLeave={handleDropdownLeave}
-                    >
-                      <div className="py-1">
-                        {item.dropdownItems?.map((dropdownItem) => (
-                          <a
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            onClick={handleDropdownItemClick}
-                            className="flex items-center px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-700/50 hover:text-white transition-colors duration-150 border-b border-gray-700/30 last:border-b-0"
-                          >
-                            <span>{dropdownItem.name}</span>
-                          </a>
-                        ))}
+                    <div className="absolute top-full left-0 pt-1 w-56 z-[10000]">
+                      <div className="bg-gray-800/95 backdrop-blur-md rounded-lg shadow-2xl border border-gray-700/50 overflow-hidden">
+                        <div className="py-1">
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <a
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              onClick={handleDropdownItemClick}
+                              className="flex items-center px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-700/50 hover:text-white transition-colors duration-150 border-b border-gray-700/30 last:border-b-0"
+                            >
+                              <span>{dropdownItem.name}</span>
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}

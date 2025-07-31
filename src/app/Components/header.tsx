@@ -70,19 +70,20 @@ const Header = () => {
         { name: 'Global Reach', href: '/about/global' },
         { name: 'Awards', href: '/about/awards' },
         { name: 'Technology Focus', href: '/about/technology' },
-        {  name: 'Our Offices', href: '/about/location' }
+        {  name: 'Our Offices', href: '/about/location' },
+	{  name: 'Our Team', href: '/about/team' }
 
       ]
     },
     {
-      name: 'Practices',
-      href: '/practices',
+      name: 'Services',
+      href: '/services',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Assurance', href: '/practices/assurance' },
-        { name: 'Tax Services', href: '/practices/tax' },
-        { name: 'Advisory', href: '/practices/advisory' },
-        { name: 'Risk Management', href: '/practices/risk' }
+        { name: 'Assurance', href: '/services/assurance' },
+        { name: 'Tax Services', href: '/services/tax' },
+        { name: 'Advisory', href: '/services/advisory' },
+        { name: 'Risk Management', href: '/services/risk' }
       ]
     },
     {

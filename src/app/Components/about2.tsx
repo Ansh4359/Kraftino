@@ -18,7 +18,7 @@ function About2() {
 
             <div className="space-y-4 text-gray-700 font-sans leading-relaxed">
               <p className="text-base">
-                TaxaGo Consultancy Services is a top rated accounting, taxation, Financial and Investment advisory firm entrusted by individuals and leading organizations to deliver effective accounting, advisory, and financial solutions with diligence, vision, and responsive client service.
+               TaxaGo Consultancy Services is a top rated accounting, taxation, Financial and Investment advisory firm entrusted by individuals and leading organizations to deliver effective accounting, advisory, and financial solutions with diligence, vision, and responsive client service.
               </p>
 
               <p className="text-base">

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TaxaGO",
+  title: "TaxaGO - Consultancy Services",
   description: "TaxaGo Official",
 };
 

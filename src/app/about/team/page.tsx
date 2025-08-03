@@ -4,8 +4,17 @@ import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import Link from 'next/link';
 
+interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  skills: string[];
+}
+
 export default function TaxaTeam() {
-  const [selectedMember, setSelectedMember] = useState(null);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const teamMembers = [
     {
@@ -58,7 +67,7 @@ export default function TaxaTeam() {
     }
   ];
 
-  const openModal = (member) => {
+  const openModal = (member: TeamMember) => {
     setSelectedMember(member);
   };
 

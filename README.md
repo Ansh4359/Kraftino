@@ -185,4 +185,9 @@ For support, email taxagocs@gmail.com or contact:
 
 ---
 
+## Needed To do 
+
+- [x] finish about page
+
+
 **Built with ❤️ by the TaxaGO Development Team**

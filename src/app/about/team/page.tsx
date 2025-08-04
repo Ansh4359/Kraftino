@@ -150,9 +150,9 @@ export default function TaxaTeam() {
                   </p>
                   
                   {/* Click indicator */}
-                  <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors duration-300">
+                  {/* <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors duration-300">
                     Click to view bio
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Hover Effect Overlay */}

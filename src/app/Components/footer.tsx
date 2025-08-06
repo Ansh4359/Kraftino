@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Linkedin, Facebook, Twitter, Youtube } from 'lucide-react';
+import { Linkedin, Facebook, Twitter, Youtube, Instagram } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -32,7 +32,7 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-medium mb-4">FOLLOW US</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a target="_blank" href="https://www.linkedin.com/company/taxago-consultancy-service/posts/?feedView=all" className="text-gray-400 hover:text-white transition-colors">
                   <Linkedin size={20} />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Twitter size={20} />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Youtube size={20} />
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>
@@ -60,8 +60,9 @@ export default function Footer() {
           {/* Careers */}
           <div>
             <h3 className="text-sm font-medium mb-4 text-orange-400 border-b-2 border-orange-400 pb-1 inline-block">
-              Careers
+              Quick Links
             </h3>
+
           </div>
 
           {/* Subscribe */}

@@ -22,7 +22,7 @@ export default function TaxaTeam() {
     {
       id: 1,
       name: "Sanjeev Kumar Singh",
-      role: "Founder & Investment Consultant",
+      role: "Founder",
       bio: "Over 10 years of extensive experience in Accounting, Finance, Taxation, and Business Management, both in India and internationally",
       image: "https://res.cloudinary.com/dicxlz6xi/image/upload/v1753941990/IMG-20250730-WA0059_vsv4xq.jpg",
       skills: ["BCom", "MCom", "MBA", "CISA"]
@@ -70,10 +70,10 @@ export default function TaxaTeam() {
     {
       id: 7,
       name: "Khalef Abdulla Khalef",
-      role: "Tax Consultant",
+      role: "Tax Consultant - CPA(TANZANIA)",
       bio: "8 Year of Work Experience in the field of account Taxation and Finance",
       image: "https://res.cloudinary.com/dd3fmtksn/image/upload/v1754487495/IMG-20250805-WA0002_avhbrf.jpg",
-      skills: []
+      skills: ["CPA"]
     }
   ];
 

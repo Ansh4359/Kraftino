@@ -9,23 +9,19 @@ const TestimonialCarousel = () => {
   const testimonials = [
     {
       text: "TaxaGo team is a highly professional, experienced, and knowledgeable. It is always satisfying to work with them.",
-      company: "Leading Financial Institution"
+      company: "Stantech Pvt. Ltd"
     },
     {
-      text: "Their expertise in financial advisory services has been instrumental in our company's growth and strategic planning.",
-      company: "Tech Startup Unicorn"
+      text: "Their expertise in financial advisory services has been instrumental in our company growth and strategic planning.",
+      company: "Swarashtra Import & Export"
     },
     {
-      text: "TaxaGo's commitment to excellence and attention to detail sets them apart from other consulting firms in the industry.",
-      company: "Fortune 500 Corporation"
+      text: "TaxaGo commitment to excellence and attention to detail sets them apart from other consulting firms in the industry.",
+      company: "Gaurav Freight Forwader"
     },
     {
       text: "Working with TaxaGo has transformed our approach to business strategy. Their insights are invaluable.",
-      company: "Global Manufacturing Leader"
-    },
-    {
-      text: "The team's professionalism and deep industry knowledge make them our go-to partner for critical business decisions.",
-      company: "Healthcare Innovation Company"
+      company: "Kraftino Paper Industry"
     }
   ];
 

@@ -16,8 +16,8 @@ const TaxCarousel = () => {
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      title: "Maximize Your Returns",
+      image: "http://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg?_gl=1*pwzxg5*_ga*MTYyMjUyNzU2MS4xNzU0NDk5OTkz*_ga_8JE65Q40S6*czE3NTQ0OTk5OTIkbzEkZzEkdDE3NTQ1MDAxODQkajU5JGwwJGgw",
+      title: "Maximize Your Financial Returns",
       tagline: "Every deduction matters, every dollar counts - let us find them all",
       gradient: "from-emerald-900/70 to-blue-900/50"
     },
@@ -31,7 +31,7 @@ const TaxCarousel = () => {
     {
       id: 4,
       image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      title: "Peace of Mind",
+      title: "License Services",
       tagline: "Professional guidance that transforms tax season from stress to success",
       gradient: "from-indigo-900/70 to-slate-900/50"
     }

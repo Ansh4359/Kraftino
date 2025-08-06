@@ -13,17 +13,16 @@ function About2() {
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-sans leading-tight">
                 <span className="text-black-600">TaxaGO</span>
               </h1>
-              {/* <div className='w-41 h-1 bg-blue-600 mt-3'></div> */}
+              <div className='text-1xl font-bold mt-3'>Global Experts in Taxation,Accounting,Finance, Legal & Business Advisory</div>
             </div>
 
             <div className="space-y-4 text-gray-700 font-sans leading-relaxed">
               <p className="text-base">
-               TaxaGo Consultancy Services is a top rated accounting, taxation, Financial and Investment advisory firm entrusted by individuals and leading organizations to deliver effective accounting, advisory, and financial solutions with diligence, vision, and responsive client service.
+              TaxaGo Consultancy Services, established by Sanjeev Kumar Singh in 2021, is a leading multi-disciplinary consultancy firm committed to providing end-to-end business solutions. The firm specializes in accounting and financial management, taxation and strategic tax planning, legal and regulatory compliance, and business management consulting.
               </p>
 
               <p className="text-base">
-                At TaxaGo, complex issues are solved through teamwork, putting our collective experience and expertise to work for you. Recognized as a category leader for client satisfaction, we serve clients locally, regionally, and globally.
-              </p>
+              What sets TaxaGo apart is its strong foundation in India and strategic presence across the Gulf and African regions. This geographic reach enables the firm to combine global expertise with deep local insights, delivering world-class consultancy tailored to diverse market needs.              </p>
             </div>
 
             {/* Stats or Features */}
@@ -67,33 +66,17 @@ function About2() {
               <div className="space-y-4 text-white">
                 <h2 className="text-xl font-bold font-sans">Our Mission</h2>
                 <p className="text-blue-100 font-sans leading-relaxed text-sm">
-                TaxaGo Consultancy Services  was established on 1st March 2022 By Mr.Sanjeev Kumar Singh and his Associates.Since then, the firm has grown in strength over the years with plethora of knowledge and experience of it&apos;s professionals.
+                To deliver reliable, technology-driven, and region-specific consulting services that help businesses stay compliant, competitive, and confident—wherever they operate.
                 </p>
 
-                <div className="space-y-3 pt-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-                    <span className="font-sans text-sm">Global Expertise</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-                    <span className="font-sans text-sm">
-                      Multi-cultural Teams
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-                    <span className="font-sans text-sm">
-                      Comprehensive Solutions
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-                    <span className="font-sans text-sm">
-                      Cross-border Expertise
-                    </span>
-                  </div>
-                </div>
+              </div>
+
+              <div className="space-y-4 text-white my-5">
+                <h2 className="text-xl font-bold font-sans">Our Vision</h2>
+                <p className="text-blue-100 font-sans leading-relaxed text-sm">
+              To be the preferred partner for businesses worldwide seeking ethical, transparent, and growth-oriented advisory services.
+                </p>
+
               </div>
             </div>
 

@@ -5,6 +5,18 @@ import { X } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
+interface TaxService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  icon: React.ReactNode;
+  features?: string[];
+  benefits?: string[];
+}
+
+
 // Lazy load icons for better initial load
 const CalendarDays = lazy(() => import('lucide-react').then(mod => ({ default: mod.CalendarDays })));
 const DollarSign = lazy(() => import('lucide-react').then(mod => ({ default: mod.DollarSign })));
@@ -59,7 +71,62 @@ const ServiceCard = memo(function ServiceCard({ service, onClick, index }: { ser
 export default function TaxaTaxServices() {
   const [selectedService, setSelectedService] = useState<TaxService | null>(null);
 
-  // Your tax services data remains mostly the same ...
+  const taxServices: TaxService[] = [
+    {
+      id: 1,
+      name: "Income Tax Filing",
+      category: "Individual",
+      description: "Expert preparation and filing of individual income tax returns with maximum deductions and compliance assurance.",
+      icon: <CalendarDays size={32} />,
+      features: ["Tax return preparation", "Deduction optimization", "E-filing services", "Amendment support"],
+      benefits: ["Maximize refunds", "Ensure compliance", "Save time", "Expert guidance"]
+    },
+    {
+      id: 2,
+      name: "Business Tax Planning",
+      category: "Corporate",
+      description: "Strategic tax planning for businesses to minimize liability and optimize financial performance.",
+      icon: <DollarSign size={32} />,
+      features: ["Tax strategy development", "Quarterly planning", "Entity structuring", "Compliance management"],
+      benefits: ["Reduce tax burden", "Improve cash flow", "Strategic planning", "Risk mitigation"]
+    },
+    {
+      id: 3,
+      name: "GST Compliance",
+      category: "Compliance",
+      description: "Complete GST registration, filing, and compliance services for businesses of all sizes.",
+      icon: <Banknote size={32} />,
+      features: ["GST registration", "Monthly/Quarterly returns", "Input credit optimization", "Audit support"],
+      benefits: ["Full compliance", "Penalty avoidance", "Credit optimization", "Peace of mind"]
+    },
+    {
+      id: 4,
+      name: "Tax Advisory",
+      category: "Consulting",
+      description: "Professional tax advisory services for complex tax situations and strategic planning.",
+      icon: <TrendingUp size={32} />,
+      features: ["Tax consultation", "Strategic advice", "Dispute resolution", "Planning services"],
+      benefits: ["Expert guidance", "Risk reduction", "Optimal strategies", "Long-term planning"]
+    },
+    {
+      id: 5,
+      name: "Audit & Assurance",
+      category: "Audit",
+      description: "Comprehensive audit services to ensure accuracy and compliance with tax regulations.",
+      icon: <Receipt size={32} />,
+      features: ["Internal audits", "Tax audits", "Compliance reviews", "Risk assessment"],
+      benefits: ["Ensure accuracy", "Identify issues", "Improve processes", "Regulatory compliance"]
+    },
+    {
+      id: 6,
+      name: "Financial Reporting",
+      category: "Reporting",
+      description: "Professional financial reporting services to meet regulatory requirements and business needs.",
+      icon: <FileBarChart2 size={32} />,
+      features: ["Financial statements", "Regulatory reporting", "Management reports", "Analysis services"],
+      benefits: ["Accurate reporting", "Regulatory compliance", "Business insights", "Decision support"]
+    }
+  ];
 
   // Keyboard accessibility to close modal with Esc key
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -113,7 +180,7 @@ export default function TaxaTaxServices() {
             },
           }}
         >
-          {taxServices.map((service, i) => (
+          {taxServices.map((service: TaxService, i: number) => (
             <ServiceCard key={service.id} service={service} onClick={setSelectedService} index={i} />
           ))}
         </motion.div>
@@ -199,6 +266,65 @@ export default function TaxaTaxServices() {
               </motion.div>
 
               {/* Description & columns similarly animated */}
+              <motion.div
+                className="mb-8"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.3 } }}
+              >
+                <h3 className="text-xl font-semibold text-cyan-300 mb-4">Service Description</h3>
+                <p id="modal-description" className="text-gray-300 text-lg leading-relaxed">
+                  {selectedService.description}
+                </p>
+              </motion.div>
+
+              {/* Features */}
+              {selectedService.features && (
+                <motion.div
+                  className="mb-8"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.3 } }}
+                >
+                  <h3 className="text-xl font-semibold text-cyan-300 mb-4">Features</h3>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {selectedService.features.map((feature: string, index: number) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center text-gray-300"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + index * 0.1, duration: 0.3 }}
+                      >
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Benefits */}
+              {selectedService.benefits && (
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.3 } }}
+                >
+                  <h3 className="text-xl font-semibold text-cyan-300 mb-4">Benefits</h3>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {selectedService.benefits.map((benefit: string, index: number) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center text-gray-300"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1, duration: 0.3 }}
+                      >
+                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {benefit}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
               {/* ... rest of modal content ... (keep as before) */}
             </motion.div>

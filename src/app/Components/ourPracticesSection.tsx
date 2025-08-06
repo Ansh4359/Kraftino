@@ -30,7 +30,7 @@ export default function OurPracticesSection() {
               />
             </div>
             
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">Tax</h3>
+            <h3 className="text-xl font-semibold text-gray-700 mb-4">Accounting and Taxation</h3>
             
             <p className="text-gray-600 leading-relaxed mb-6 text-sm">
               Our team combines deep expertise in Federal and State Tax compliance to guide you through complex tax regulations and help you stay compliant always.
@@ -55,7 +55,7 @@ export default function OurPracticesSection() {
               />
             </div>
             
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">Advisory</h3>
+            <h3 className="text-xl font-semibold text-gray-700 mb-4">Legal & Corporate Compliance</h3>
             
             <p className="text-gray-600 leading-relaxed mb-6 text-sm">
               Gain a competitive edge with our advisory services. We assist you in assessing, evaluating, and analyzing your business interests, providing valuable insights necessary to navigate the intricate landscape of the business environment.
@@ -69,6 +69,16 @@ export default function OurPracticesSection() {
             </a>
           </div>
         </div>
+        <div>
+          Financial Taxation
+        </div>
+        <div>
+          Buisness Consultancy
+        </div>
+
+      {/* Financial Advisory */}
+      
+
       </div>
     </div>
   );

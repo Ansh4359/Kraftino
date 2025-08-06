@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion, Variants } from "framer-motion";
 
 interface ContactFormData {
   fullName: string;
@@ -26,7 +26,7 @@ const ContactUs = () => {
   const shouldReduceMotion = useReducedMotion();
 
   // Animation variants
-  const containerVariants: any = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -38,7 +38,7 @@ const ContactUs = () => {
     }
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 30,
@@ -57,7 +57,7 @@ const ContactUs = () => {
     }
   };
 
-  const headerVariants: any = {
+  const headerVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: -40,
@@ -76,7 +76,7 @@ const ContactUs = () => {
     }
   };
 
-  const formFieldVariants: any = {
+  const formFieldVariants: Variants = {
     hidden: { 
       opacity: 0, 
       x: -20,
@@ -94,7 +94,7 @@ const ContactUs = () => {
     }
   };
 
-  const cardHoverVariants: any = {
+  const cardHoverVariants: Variants = {
     rest: {
       scale: 1,
       y: 0
@@ -110,7 +110,7 @@ const ContactUs = () => {
     }
   };
 
-  const floatingElementVariants: any = {
+  const floatingElementVariants: Variants = {
     animate: {
       y: [-10, 10, -10],
       x: [-5, 5, -5],
@@ -123,7 +123,7 @@ const ContactUs = () => {
     }
   };
 
-  const messageVariants: any = {
+  const messageVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 20,

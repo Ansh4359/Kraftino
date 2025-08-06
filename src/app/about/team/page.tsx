@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import Link from 'next/link';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion, Variants } from 'framer-motion';
 
 interface TeamMember {
   id: number;
@@ -78,7 +78,7 @@ export default function TaxaTeam() {
   ];
 
   // Animation variants
-  const containerVariants: any = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -90,7 +90,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 60,
@@ -109,7 +109,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const cardHoverVariants: any = {
+  const cardHoverVariants: Variants = {
     rest: {
       scale: 1,
       rotateY: 0,
@@ -127,7 +127,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const headerVariants: any = {
+  const headerVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: -50,
@@ -146,7 +146,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const floatingElementVariants: any = {
+  const floatingElementVariants: Variants = {
     animate: {
       y: [-10, 10, -10],
       x: [-5, 5, -5],
@@ -159,7 +159,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const modalVariants: any = {
+  const modalVariants: Variants = {
     hidden: {
       opacity: 0,
       scale: 0.8,
@@ -187,7 +187,7 @@ export default function TaxaTeam() {
     }
   };
 
-  const backdropVariants: any = {
+  const backdropVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,

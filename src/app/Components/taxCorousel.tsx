@@ -16,7 +16,7 @@ const TaxCarousel = () => {
     },
     {
       id: 2,
-      image: "http://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg?_gl=1*pwzxg5*_ga*MTYyMjUyNzU2MS4xNzU0NDk5OTkz*_ga_8JE65Q40S6*czE3NTQ0OTk5OTIkbzEkZzEkdDE3NTQ1MDAxODQkajU5JGwwJGgw",
+      image: "https://images.pexels.com/photos/4386373/pexels-photo-4386373.jpeg?_gl=1*pwzxg5*_ga*MTYyMjUyNzU2MS4xNzU0NDk5OTkz*_ga_8JE65Q40S6*czE3NTQ0OTk5OTIkbzEkZzEkdDE3NTQ1MDAxODQkajU5JGwwJGgw",
       title: "Maximize Your Financial Returns",
       tagline: "Every deduction matters, every dollar counts - let us find them all",
       gradient: "from-emerald-900/70 to-blue-900/50"
